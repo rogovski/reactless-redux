@@ -1,12 +1,9 @@
-export default function counter(state = 0, action) {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    default:
-      return state
-  }
+import schema from './schema.js';
+import dataframe from './dataframe.js';
+import validator from './validator.js';
+
+function lastAction (state = null, action) {
+  return action;
 }
 
-// export default { messages, session, friendlist, lastAction };
+export default { schema, dataframe, validator, lastAction };
